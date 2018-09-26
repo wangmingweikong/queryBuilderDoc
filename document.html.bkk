@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Tillage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstarp-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstarp-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--fonts-->
+<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600' rel='stylesheet' type='text/css'>
+<!--/fonts-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+<script>
+	 new WOW().init();
+</script>
+<!-- pop-up -->
+<link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+	   <script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				 *  Simple image gallery. Uses default settings
+				 */
+
+				$('.fancybox').fancybox();
+
+			});
+		</script>
+<!-- pop-up -->
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner a-banner">
+		<!-- container -->
+		<div class="container">
+			<div class="header">
+				<div class="head-logo">
+					<a href="index.html"><img src="images/logo1.png" alt="" /></a>
+				</div>
+				<div class="top-nav">
+					<span class="menu"><img src="images/menu.png" alt=""></span>
+					<ul class="nav1">
+						<li class="hvr-sweep-to-bottom"><a href="index.html">首页<!--<i>Lorem ipsum dolor sit amet</i> --></a></li>
+						<li class="hvr-sweep-to-bottom"><a href="demo.html">Demo</a></li>
+						<li class="hvr-sweep-to-bottom   active"><a href="document.html">文档</a></li>
+						<li class="hvr-sweep-to-bottom"><a href="appEnv.html">应用场景</a></li>
+						<li class="hvr-sweep-to-bottom"><a href="mail.html">联系我们</a></li>
+						<div class="clearfix"> </div>
+					</ul>
+					<!-- script-for-menu -->
+							 <script>
+							   $( "span.menu" ).click(function() {
+								 $( "ul.nav1" ).slideToggle( 300, function() {
+								 // Animation complete.
+								  });
+								 });
+							</script>
+						<!-- /script-for-menu -->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //banner -->
+	<!-- products-top -->
+	<div class="products-top">
+		<!-- container -->
+		<div class="container">
+			<h3 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">使用说明</h3>
+			<h5 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">QueryBuilder是一个基于可视化复杂SQL拼接的一个插件，主要用来缓解用户使用PLSQL或SQL developer构建复杂SQL时的可读性差的问题。
+				QueryBuilder使用了Bootstrap框架以及基于Bootstrap的技术，构成了一个具有优雅的界面可视化、功能齐全化、使用化的扁平化的SQL动态拼接插件。<CODE>jQuery QueryBuilder</CODE> 支持跟随窗口缩放，支持主流浏览器心访问（IE8以上，Chrom,fireFox,Opra）。<span>如果你想快速了解或使用 <code>jQuery QueryBuilder</code> 插件，下面的使用说明将会对你有很大帮助，我们建议，请仔细阅读说明文档，以免在应用至自己项目时造成不必要的麻烦。 </span></h5>
+			<div class="row">
+				<div class="col-md-9" role="main">
+					<section class="bs-docs-section clearfix">
+
+						<h1 id="basic1" class="page-header">组件依赖</h1>
+
+						<p>
+							当你准备使用 <code>jQuery QueryBuilder</code> 时，你首先需要熟知 <code>QueryBuilder</code> 依赖的环境
+						</p>
+
+
+					</section>
+
+				</div>
+
+				<div class="col-md-3" role="complementary">
+					//bootstrap 滑轮监听
+				</div>
+			</div>
+		</div>
+		<!-- container -->
+ 	</div>
+	<!-- //products-top -->
+
+	<!-- footer -->
+	<div class="footer">
+		<!-- container -->
+		<div class="container">
+			<div class="col-md-6 footer-left  wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="demo.html">Demo</a></li>
+					<li><a href="document.html">文档</a></li>
+					<li><a href="appEnv.html">应用场景</a></li>
+					<li><a href="mail.html">联系我们</a></li>
+				</ul>
+				<form>
+					<input type="text" placeholder="邮箱" required="">
+					<input type="submit" value="加入我们">
+				</form>
+			</div>
+			<div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<h3>联系方式</h3>
+				<div class="address">
+					<p>Email:,
+						<span>825338623@qq.com</span>
+					</p>
+				</div>
+				<div class="phone">
+					<p>(+86)18253594233</p>
+				</div>
+			</div>
+			<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<a href="#"><img src="images/logo.png" alt="" /></a>
+				<p>QueryBuilder-jQuery 是由以下人员辛勤劳作的的结晶：<p>郭鹏飞，武彩平</p></p>
+				<!--<p>QueryBuilder-jQuery 是由以下人员辛勤劳作的的结晶：<p>郭鹏飞，武彩平</p>，我们在这个插件的创作、构思的过程中付出了大量的汗水、在零散的业余时间内最终完成了这个插件，欢迎使用者对我们提出宝贵的意见，我们将会努力将这个插件做的更好。</p>
+-->
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //footer -->
+	<div class="copyright">
+		<!-- container -->
+		<div class="container">
+			<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<p>Copyright &copy; 2016. 牛牛技术网 All rights <a href="http://www.niubai.net.cn" target="_blank" title="QueryBuilder">QueryBuilder - jQuery</a> - <a href="http://www.miibeian.gov.cn/" target="_blank">鲁ICP备16025806号-1 </a></p>
+			</div>
+			<!--<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<ul>
+					<li><a href="#" class="twitter"> </a></li>
+					<li><a href="#" class="twitter facebook"> </a></li>
+					<li><a href="#" class="twitter chrome"> </a></li>
+					<li><a href="#" class="twitter pinterest"> </a></li>
+					<li><a href="#" class="twitter linkedin"> </a></li>
+					<li><a href="#" class="twitter dribbble"> </a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>-->
+			<!-- //container -->
+		</div>
+	</div>
+</body>
+</html>

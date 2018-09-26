@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://v3.bootcss.com/getting-started/ -->
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="jQuery queryBuilder Bootstrap - 简洁、直观、强悍、兼容移动设备前端开发组件。">
+    <meta name="keywords" content="jQuery queryBuilder, Bootstrap SQL Templates, 自定义查询模板, QueryBuilder jQuery,
+    优雅的SQL拼接, 高级自定义查询, QueryBuilder, QueryBuilder jquery, 可视化复杂SQL拼接"/>
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="作者：郭鹏飞 &lt;825338623@qq.com&gt;">
+
+    <title>
+
+        文档-使用说明 ·jQuery QueryBuilder
+
+    </title>
+
+    <!-- 主样式 -->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+    <!--// css -->
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600'
+          rel='stylesheet' type='text/css'>
+    <!--/fonts-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Documentation extras -->
+    <link href="css/docs.min.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- bootstrap-date -->
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet"
+          type="text/css">
+
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/docs.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <script>
+        new WOW().init();
+    </script>
+    <!--  <script type="text/javascript"
+              src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>-->
+
+    <!-- bootstrap-date -->
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+
+    <!-- bootstrap-typeahead -->
+    <script type="text/javascript" src="js/Bootstrap-3-Typeahead.js"></script>
+
+    <!-- 全局参数文件 -->
+    <script type="text/javascript" src="js/localPara.js"></script>
+
+    <!-- 自定义方法文件 -->
+    <script type="text/javascript" src="js/queryBuilder.method.js"></script>
+
+    <!-- 主方法文件 -->
+    <script type="text/javascript" src="js/jquery.queryBuilder.js" charset="utf-8"></script>
+
+    <style>
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+        }
+
+        pre code {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<!-- banner -->
+<div class="banner a-banner">
+    <!-- container -->
+    <div class="container">
+        <div class="header">
+            <div class="head-logo">
+                <a href="index.html"><img src="images/logo1.png" alt=""/></a>
+            </div>
+            <div class="top-nav">
+                <span class="menu"><img src="images/menu.png" alt=""></span>
+                <ul class="nav1">
+                    <li class="hvr-sweep-to-bottom"><a href="index.html">首页<!--<i>Lorem ipsum dolor sit amet</i> --></a>
+                    </li>
+                    <li class="hvr-sweep-to-bottom"><a href="demo.html">Demo</a></li>
+                    <li class="hvr-sweep-to-bottom   active"><a href="document.html">文档</a></li>
+                    <li class="hvr-sweep-to-bottom"><a href="appEnv.html">应用场景</a></li>
+                    <li class="hvr-sweep-to-bottom"><a href="mail.html">联系我们</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+                <!-- script-for-menu -->
+                <script>
+                    $("span.menu").click(function () {
+                        $("ul.nav1").slideToggle(300, function () {
+                            // Animation complete.
+                        });
+                    });
+                </script>
+                <!-- /script-for-menu -->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+<!-- //banner -->
+<!-- products-top -->
+<div class="products-top">
+    <!-- container -->
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9" role="main">
+                <div class="bs-docs-section">
+                    <h1 id="user_note" class="page-header">使用说明</h1>
+
+                    <p><code>QueryBuilder</code> 是一个基于可视化复杂SQL拼接的一个插件，主要用来缓解用户使用 PLSQL 或 SQL developer 构建复杂SQL时的可读性差的问题。
+                    </p>
+
+                    <p><code>QueryBuilder</code> 使用了 Bootstrap 框架以及基于 Bootstrap 的技术，构成了一个具有优雅的界面可视化、功能齐全化、实用化的扁平化的 SQL
+                        动态拼接插件。<CODE>jQuery
+                            QueryBuilder</CODE> 支持跟随窗口缩放，支持主流浏览器心访问（IE8以上，Chrom,fireFox,Opra）。</p>
+
+                    <p>如果你想快速了解或使用 <code>jQuery
+                        QueryBuilder</code> 插件，下面的使用说明将会对你有很大帮助，我们建议，请仔细阅读说明文档，以免在应用至自己项目时造成不必要的麻烦。 </p>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="comp_deploey" class="page-header">组件依赖</h1>
+
+                    <p> 当你准备使用 <code>jQuery QueryBuilder</code> 时，你首先需要熟知 <code>QueryBuilder</code> 依赖的基础组件环境
+
+                    </p>
+
+                    <div class="row bs-downloads">
+                        <div class="col-sm-4">
+                            <h3 id="download-bootstrap">jQuery 依赖 </h3>
+
+                            <p>需要在所有引用的js组件的顶端引用 jQuery 组件，引用 <code>jquery.js</code> 或者<code>jquery.min.js</code> ，版本需为
+                                1.9+ 。</p>
+
+                            <p>
+                                <a href="https://jquery.com/" class="btn btn-lg btn-outline">下载 jQuery</a>
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 id="download-source">Bootstrap 依赖</h3>
+
+                            <p><code>QueryBuilder</code> 需要 Bootstrap 环境依赖，包含 <strong><code>bootstrap.css</code> 和
+                                <code>bootstrap.js</code></strong> ,Bootstrap 版本需为 3+。</p>
+
+                            <p>
+                                <a href="http://d.bootcss.com/bootstrap-3.3.5.zip"
+                                   class="btn btn-lg btn-outline">下载源码</a>
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 id="download-sass">其它依赖</h3>
+
+                            <p>
+                                本插件大量引入了开源组件，包含 <code>Bootstrap select2 </code> 、 <code> Bootstrap-datetimepicke </code>
+                                、 <code> Sweetalert </code> 等
+
+                            </p>
+
+                            <p>
+                                <a href="http://git.oschina.net/noworld/BuilderDynmic" class="btn btn-lg btn-outline">查看详细信息</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="start" class="page-header">开始使用</h1>
+
+                    <p>
+                        <code>QueryBuilder</code> 可以让你快速、简单的加载到本插件，是用户感受到 <code>QueryBuilder</code>
+                        插件的轻便、简洁性；正因为如此，请您按照下面的方法步骤进行使用。
+                    </p>
+
+
+                    <h2 id="start_first">
+                        <a class="anchorjs-link " href="#whats-included-source"
+                           aria-label="Anchor link for: whats included source" data-anchorjs-icon=""
+                           style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        引入依赖
+                    </h2>
+
+                    <p>请在你的 HTML 应用程序中引入下列文件，就 <code>QueryBuilder</code> 插件来说，插件核心只有 <code>queryBuilder.css</code> ，
+                        <code>jquery.queryBuilder.js</code> ，<code>queryBuilder.method.js</code> ，引用的其他样式或者 javascript
+                        文件是因为 <code>QueryBuilder</code> 插件使用了这些第三方的开源组件，因此，使用者在使用本插件时，必须同时引用罗列出来的这些插件。</p>
+
+                    <div>
+
+                        <pre class="pre-scrollable"><span
+                                class="c">&lt;!-- QueryBuilder 核心 CSS 文件 --&gt;</span><br/><span
+                                class="nt">&lt;link</span> <span class="na">rel=</span><span
+                                class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/queryBuilder.css"</span><span
+                                class="nt">&gt;</span><br/><span
+                                class="c">&lt;!-- Bootstrap 核心 CSS 样式文件 --&gt;</span><br/><span
+                                class="nt">&lt;link</span> <span class="na">rel=</span><span
+                                class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"bootstrap-3.3.5-dist/css/bootstrap.min.css"</span><span
+                                class="nt">&gt;</span><br/><span class="c">&lt;!-- QueryBuilder 默认使用的第三方插件 CSS 样式文件 --&gt;</span><br/><br/><span
+                                class="nt">&lt;link</span> <span class="na">rel=</span><span
+                                class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/bootstrap-datetimepicker.css"</span><span
+                                class="nt">&gt;</span><br/><span class="c">&lt;!-- jQuery文件。务必在 QueryBuilder.min.js 之前引入 --&gt;</span><br/><span
+                                class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jquery-1.12.3.min.js"</span><span
+                                class="nt">&gt;&lt;/script&gt;</span><br/><span class="c">&lt;!-- 最新的 Bootstrap 核心 JavaScript 文件 --&gt;</span><br/><span
+                                class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bootstrap-3.3.5-dist/js/bootstrap.min.js"</span><span
+                                class="nt">&gt;&lt;/script&gt;</span><br/><span class="c">&lt;!-- QueryBuilder 插件默认使用的第三方插件 js --&gt;</span><br/><span
+                                class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/Bootstrap-3-Typeahead.js"</span><span
+                                class="nt">&gt;&lt;/script&gt;</span><br/><span class="c">&lt;!-- QueryBuilder 插件自定义方法文件 js，必须引入，自定义方法需要在此定义 --&gt;</span><br/><span
+                                class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/queryBuilder.method.js"</span><span
+                                class="nt">&gt;&lt;/script&gt;</span><br/><span class="c">&lt;!-- QueryBuilder 插件主文件 --&gt;</span><br/><span
+                                class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jquery.queryBuilder.js"</span><span
+                                class="nt">&gt;&lt;/script&gt;</span><br/><span class="c">&lt;!-- QueryBuilder 插件全局变量文件 js，使用时不必引入此文件，仅在调用函数时传入这些参数即可 --&gt;</span><br/><span
+                                class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/localPara.js"</span><span
+                                class="nt">&gt;&lt;/script&gt;</span></pre>
+
+                    </div>
+
+                    <h2 id="start-redy"><a class="anchorjs-link " href="#whats-included-source"
+                                           aria-label="Anchor link for: whats included source" data-anchorjs-icon=""
+                                           style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>准备
+                        <code>QueryBuilder</code> 容器</h2>
+
+                    <p>使用 <code>QueryBuilder</code> 插件前，需首先定义一个<strong>容器</strong>，建议使用 <code>div</code> 标签作为 <code>QueryBuilder</code>插件的容器.
+                    </p>
+
+                    <div>
+                        <pre><span class="nt">&lt;div</span> <span
+                                class="na">id=</span><span class="s">"sql_builder"</span> <span
+                                class="na">class=</span><span class="s">"mainDiv"</span> <span
+                                class="nt">&gt;&lt;/div&gt;</span></pre>
+                    </div>
+
+                    <h2 id="start-start"><a class="anchorjs-link " href="#whats-included-source"
+                                            aria-label="Anchor link for: whats included source" data-anchorjs-icon=""
+                                            style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>绑定
+                        <code>QueryBuilder</code> 插件</h2>
+
+                    <p>
+                        使用下述js方法绑定加载 <code>QueryBuilder</code> 插件.
+                    </p>
+
+                    <div>
+                        <pre class="pre-scrollable"><span class="nx">$</span><span class="p">(</span><span class="s1">'#sql_builder'</span><span
+                                class="p">).</span><span class="nx">queryBuilder</span><span
+                                class="p">({</span><br/><span class="na">&nbsp;&nbsp;&nbsp;sourceData</span><span
+                                class="p">:</span> <span
+                                class="kc">sourceData</span> <span class="kc">,</span><br/><span class="na">&nbsp;&nbsp;&nbsp;saveJson</span><span
+                                class="p">:</span> <span
+                                class="kc">saveJson</span> <span class="kc">,</span><br/><span class="na">&nbsp;&nbsp;&nbsp;propertiesTypes</span><span
+                                class="p">:</span> <span
+                                class="kc">propertiesTypes</span> <span class="kc">,</span><br/><span class="na">&nbsp;&nbsp;&nbsp;submitButton</span><span
+                                class="p">:</span> <span
+                                class="kc">'submit_btn'</span> <span class="kc">,</span><br/><span class="na">&nbsp;&nbsp;&nbsp;SQLButton</span><span
+                                class="p">:</span> <span
+                                class="kc">'SQL_btn'</span> <span class="kc">,</span><br/><span class="na">&nbsp;&nbsp;&nbsp;SQL_reset</span><span
+                                class="p">:</span> <span
+                                class="kc">'SQL_reset'</span> <span class="kc">,</span><br/><span class="na">&nbsp;&nbsp;&nbsp;SQL_reset</span><span
+                                class="p">:</span> <span
+                                class="kc">'SQL_reset'</span> <span class="kc">,</span><br/><span class="na">&nbsp;&nbsp;&nbsp;onPageClicked</span><span
+                                class="p">:</span> <span
+                                class="kd">function</span><span class="p">(</span> <span
+                                class="kc"> entity ,</span> <span class="kc"> property ,</span> <span
+                                class="kc"> type </span><span
+                                class="p">){</span><br/><span
+                                class="p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/><span class="p">&nbsp;&nbsp;&nbsp;},</span><br/><span
+                                class="na">&nbsp;&nbsp;&nbsp;onSQLBuild</span><span class="p">:</span> <span
+                                class="kd">function</span><span class="p">(</span> <span
+                                class="kc"> returnVal ,</span> <span class="kc"> type </span><span
+                                class="p">){</span><br/><span
+                                class="p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/><span class="p">&nbsp;&nbsp;&nbsp;}</span><br/><span
+                                class="p">})</span></pre>
+                    </div>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="use" class="page-header">用法</h1>
+
+                    <p> 包含参数说明和使用建议
+                    </p>
+
+
+                    <h2 id="use-options">
+                        <a class="anchorjs-link " href="#whats-included-source"
+                           aria-label="Anchor link for: whats included source" data-anchorjs-icon=""
+                           style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        参数说明
+                    </h2>
+
+                    <p>
+                        在使用过程中，请严格按照下面表中的参数说明方式传参，否则，可能造成组件加载不成功的错误。
+                    </p>
+
+                    <table class="table table-bordered">
+
+                        <tr class="">
+                            <td>参数</td>
+                            <td>默认值</td>
+                            <td>描述</td>
+                        </tr>
+                        <tr class="active">
+                            <td>sourceData</td>
+                            <td>必填</td>
+                            <td>要加载的所有的类信息，为具有一定格式的 Json 数据</td>
+                        </tr>
+                        <tr class="">
+                            <td>saveJson</td>
+                            <td>null</td>
+                            <td>初始化 <code>QueryBuilder</code> 组件时要显示的结构，为具有一定格式的 Json 数据</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>propertiesTypes</td>
+                            <td>必填</td>
+                            <td>树形参数对应关系，包含自定义属性类型和方法的对应方法，为具有一定格式的 Json 数据</td>
+                        </tr>
+                        <tr class="">
+                            <td>submitButton</td>
+                            <td>可不填</td>
+                            <td>一个标签的 id 属性值，用来给该 id 树形的组件绑定触发返回构建的 SQL 查询结构的事件</td>
+                        </tr>
+                        <tr class="success">
+                            <td>SQLButton</td>
+                            <td>可不填</td>
+                            <td>一个标签的 id 属性值，用来给该 id 树形的组件绑定触发返回构建的 SQL 语句的事件</td>
+                        </tr>
+                        <tr class="">
+                            <td>SQL_reset</td>
+                            <td>可不填</td>
+                            <td>一个标签的 id 属性值，用来给该 id 树形的组件绑定触发重置 SQL 查询结构的事件</td>
+                        </tr>
+                        <tr class="">
+                            <td>onSQLBuild</td>
+                            <td>建议写</td>
+                            <td>此参数对应一个函数，此方法有两个从组件传入的参数，返回给用户构建的 SQL 结构</td>
+                        </tr>
+                        <tr class="info">
+                            <td>onPageClicked</td>
+                            <td>必写</td>
+                            <td>此参数对应一个负责组件和后台程序的交互，根据组件传入参数从后台获取数据并返回给组件的函数</td>
+                        </tr>
+                    </table>
+
+                    <h2 id="use-detail">
+                        <a class="anchorjs-link " href="#whats-included-source"
+                           aria-label="Anchor link for: whats included source" data-anchorjs-icon=""
+                           style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        参数和方法详细说明
+                    </h2>
+
+                    <p>
+                        详细介绍具体的参数和函数(方法)的规格、详情
+                    </p>
+
+                    <h3 id="option-detail-sourceData"><a class="anchorjs-link " href="#whats-included-source"
+                                                         aria-label="Anchor link for: whats included source"
+                                                         data-anchorjs-icon=""
+                                                         style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>sourceData</code>
+                    </h3>
+
+                    <p>
+                        初始化的待查询的所有类的结构信息，包含：类（表）、属性（列）、属性（列）类型；此参数为 Json 类型的数据，格式如下：
+                    </p>
+
+                    <pre class="pre-scrollable"><code class="lang-json">[<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "entityName": "User",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "properties": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "id",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "string"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "name",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "string"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "age",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "int"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "depant_num",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "foreign"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ],<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "alias": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "User1",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "User2"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "entityName": "Department",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "properties": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "id",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "string"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "dep_name",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "string"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "dep_nu",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "int"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ],<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "alias": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "dept",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "dept2"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; }<br/>
+                        ]<br></code>
+                    </pre>
+
+                    <h3 id="option-detail-saveJson"><a class="anchorjs-link " href="#whats-included-source"
+                                                       aria-label="Anchor link for: whats included source"
+                                                       data-anchorjs-icon=""
+                                                       style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>saveJson</code>
+
+                    </h3>
+
+                    <p>
+                        保存好的一个已经构建好的查询模板，可以在初始化 <code>QueryBuilder</code> 插件时传入，就可以呈现出来这个查询结构，查询结构的格式如下：
+                    </p>
+
+                    <pre class="pre-scrollable"><code class="lang-json">{<br/>
+                        &nbsp; &nbsp; "oprator": "or",<br/>
+                        &nbsp; &nbsp; "rules": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "entity": "User",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alia": "User1",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "property": "id",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "string",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "consy": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "372930"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "entity": "User",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alia": "User2",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "property": "name",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "string",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "consy": "in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "郭鹏飞",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "武彩平"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; ],<br/>
+                        &nbsp; &nbsp; "rulesGroup": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "oprator": "and",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "rules": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "entity": "User",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alia": "User1",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "property": "id",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "string",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "consy": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "372930"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "entity": "User",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alia": "User2",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "property":
+                        "depant_num",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type": "foreign",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "consy": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "entity":
+                        "User",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alia":
+                        "User1",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "property":
+                        "id"<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ],<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "rulesGroup": []<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; ]<br/>
+                        }<br></code></pre>
+
+
+                    <h3 id="option-detail-propertiesTypes"><a class="anchorjs-link " href="#whats-included-source"
+                                                              aria-label="Anchor link for: whats included source"
+                                                              data-anchorjs-icon=""
+                                                              style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>propertiesTypes</code>
+
+                    </h3>
+
+                    <p>
+                        保存好的一个已经构建好的查询模板，可以在初始化 <code>QueryBuilder</code> 插件时传入，就可以呈现出来这个查询结构，使用本插件必须首先将下面的 Json
+                        全部引入，如果想自定义参数，需要在这个 Json 中追加响应的参数和对应值即可。
+                    </p>
+
+                    <P>
+                        查询结构的格式如下：
+                    </P>
+                    <pre class="pre-scrollable"><code class="lang-json">[<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "byte": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个字节",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&gt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "大于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个字节",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&lt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "小于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个字节",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个字节",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "short": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个short数据",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&gt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "大于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个short数据",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&lt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "小于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个short数据",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个short数据",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "int": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个整数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&gt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "大于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个整数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&lt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "小于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个整数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个整数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "float": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&gt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "大于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&lt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "小于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "double": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&gt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "大于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&lt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "小于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个小数",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "date": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&gt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "大于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_input",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&lt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "小于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_date_in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "timestamp": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_date_in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_date_in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&gt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "大于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_date_in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "&lt;=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "小于等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_date_in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择日期",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "string": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_typeahead",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个字符串",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": true<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "!=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_typeahead",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入一个字符串",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": true<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "包含",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_typeahead",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入多个字符串，以英文逗号分割",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": true<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "not in",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不包含",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "new_val_typeahead",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请输入多个字符串，以英文逗号分割",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": true<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": " is null",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "为空",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "null",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": true<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "is not null",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "不为空",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType": "null",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": true<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; },<br/>
+                        &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; "foreign": [<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "source": true,<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "value": "=",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "text": "等于",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "tip": "请选择关联属性",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "inputType":
+                        "new_val_foreign_select",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "callBack": false<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; ]<br/>
+                        &nbsp; &nbsp; }<br/>
+                        ]<br></code></pre>
+                    <h3 id="option-detail-submitButton"><a class="anchorjs-link " href="#whats-included-source"
+                                                           aria-label="Anchor link for: whats included source"
+                                                           data-anchorjs-icon=""
+                                                           style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>submitButton</code>
+
+                    </h3>
+
+                    <P>
+                        此参数对应要给标签的 id 属性值，为字符串，当您传入这个标签的 id 属性值后，<code>QueryBuilder</code> 插件可以为这个标签绑定一个
+                        <code>onclick</code> 的事件，当您点击这个标签时，就会触发对应的组件函数，并触发相应的方法。:
+                    </P>
+
+                    <p>例如:您有如下的一个标签</p>
+                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span
+                            class="na">id=</span><span class="s">"sql_get"</span> <span
+                            class="na">class=</span><span class="s">"form-controll"</span> <span
+                            class="na">value=</span><span class="s">"获取SQLl"</span> <span
+                            class="nt">&gt;&lt;/div&gt;</span></code></pre>
+                    <p>
+
+                        那么您在传入这个参数时应该为以下键值对：
+                    </p>
+                    <pre class="brush:js;toolbar:false"><span class="na">submitButton</span><span
+                            class="p">:</span><span class="kc">&#39;sql_get&#39;,</span></pre>
+
+
+                    <h3 id="option-detail-SQLButton"><a class="anchorjs-link " href="#whats-included-source"
+                                                        aria-label="Anchor link for: whats included source"
+                                                        data-anchorjs-icon=""
+                                                        style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>SQLButton</code>
+                    </h3>
+
+                    <p>设置方法如上述 <a href="#option-detail-submitButton"
+                                  class="anchorjs-link "><code>submitButton</code></a></p>
+
+                    <h3 id="option-detail-SQL_reset"><a class="anchorjs-link " href="#whats-included-source"
+                                                        aria-label="Anchor link for: whats included source"
+                                                        data-anchorjs-icon=""
+                                                        style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>SQL_reset</code>
+                    </h3>
+
+                    <p>设置方法如上述 <a href="#option-detail-submitButton"
+                                  class="anchorjs-link "><code>submitButton</code></a></p>
+
+
+                    <h3 id="option-detail-onSQLBuild"><a class="anchorjs-link " href="#whats-included-source"
+                                                         aria-label="Anchor link for: whats included source"
+                                                         data-anchorjs-icon=""
+                                                         style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>onSQLBuild</code>
+                    </h3>
+                    <p>
+                        此方法用户接收从 <code>QueryBuilder</code> 组件构建的查询结构或 SQL 语句。为方便用户辨别返回的是哪种值，我们设置了如下两个参数
+                        <code>returnVal</code> 、 <code>type</code> ，分别表示传入的结果或 SQL 语句和传参类型，其中 0 代表 返回的是查询结构，1表示返回的是 SQL
+                        语句
+
+                    </p>
+
+                    <p>用户可以在这个方法中接收并进行下一步的处理。</p>
+
+
+                    <h3 id="option-detail-onPageClicked"><a class="anchorjs-link " href="#whats-included-source"
+                                                            aria-label="Anchor link for: whats included source"
+                                                            data-anchorjs-icon=""
+                                                            style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+                        <code>onPageClicked</code>
+                    </h3>
+                    <p>
+                        此方法的主要作用是在组件和用户之间数据交流的桥梁，通过这个优化的回调方法，可以实时和数据库进行交流，减轻缓存压力。
+                    </p>
+
+                    <p>这个功能是国外的一些具有 <code>QueryBuilder</code>
+                        类似功能的插件所不能比的（它们通常是仅仅提供一个组件，没有数据交流，因此，必须通过初始化组件时加载所有的肯能出现的数据，这就会造成不必要的缓存压力）。</p>
+
+                    <p>
+                        当使用 <code>jQuery QueryBuilder</code> 组件时，我们常常需要在组件中实时显示后台查询到的数据，比如：用户新建一个查询规则<br/>
+                    </p>
+
+                    <pre class="brush:js;toolbar:false"><span class="na">user.name</span><span
+                            class="p"> != </span><span class="kc">&#39;......&#39;,</span></pre>
+                    <p>
+                        这个不等于的值常常是需要从后台获取，并显示在组件输入框的提示信息中，那么我们就通过这个回调函数来提供一个供用户的后台和组件之间进行数据交流的方式。
+                    </p>
+
+                    <p>
+                        在这个回调方法中，组件会向方法传递三个参数 <code>entity</code>(规则的实体类)
+                        ，<code>property</code>（规则的属性），<code>type</code>（规则的属性类型）
+                    </p>
+
+                    <p>
+                        用户在此方法中根据在 <a href="#option-detail-propertiesTypes"><code>propertiesTypes</code></a>
+                        定义好的树形规则添加对应的和后台交流方式，然后将从后台获取到的数据以数组的形式返回给组件。
+                    </p>
+
+                    <p>您需严格按照如下格式引用此参数:</p>
+
+                    <div>
+
+                                 <pre class="pre-scrollable"><span
+                                         class="na">&nbsp;&nbsp;&nbsp;onPageClicked</span><span
+                                         class="p">:</span> <span
+                                         class="kd">function</span><span class="p">(</span> <span
+                                         class="kc"> entity ,</span> <span class="kc"> property ,</span> <span
+                                         class="kc"> type </span><span
+                                         class="p">){</span><br/><span
+                                         class="p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/><span class="k">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return</span> <span
+                                         class="p">[ arrayList ]</span><br/><span class="p">&nbsp;&nbsp;&nbsp;}</pre>
+                    </div>
+                    <p>返回的数组格式如下：</p>
+                    <pre class="pre-scrollable"><span class="c">&lt;!--['当用户输入时显示出来的信息-$-自定义信息，可用于便于用户搜索']，具体信息参考 <a
+                            href="https://github.com/bassjobsen/Bootstrap-3-Typeahead/" target="_blank"> Bootstrap
+                        typeahead</a> --&gt;</span><br/><span
+                            class="p">['张三-$-zhangshan','李四-$-lisi']</span></pre>
+                </div>
+            </div>
+            <div class="col-md-3" role="complementary">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                    <ul class="nav bs-docs-sidenav">
+                        <li>
+                            <a href="#user_note">使用说明</a>
+                        </li>
+                        <li>
+                            <a href="#comp_deploey">组件依赖</a>
+                        </li>
+                        <li>
+                            <a href="#start">开始使用</a>
+                            <ul class="nav">
+                                <li><a href="#start_first">引入依赖</a></li>
+                                <li><a href="#start-redy">准备 QueryBuilder 容器</a></li>
+                                <li><a href="#start-start">绑定 QueryBuilder 插件</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#use">用法</a>
+                            <ul class="nav">
+                                <li><a href="#use-options">参数说明</a></li>
+                                <li><a href="#use-detail">参数和方法详细说明</a>
+                                    <ul class="nav">
+                                        <li><a href="#option-detail-sourceData">sourceData</a></li>
+                                        <li><a href="#option-detail-saveJson">saveJson</a></li>
+                                        <li><a href="#option-detail-propertiesTypes">propertiesTypes</a></li>
+                                        <li><a href="#option-detail-SQLButton">SQLButton</a></li>
+                                        <li><a href="#option-detail-SQL_reset">SQL_reset</a></li>
+                                        <li><a href="#option-detail-onSQLBuild">onSQLBuild</a></li>
+                                        <li><a href="#option-detail-onPageClicked">onPageClicked</a></li>
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                    <a class="back-to-top" href="#top">
+                        返回顶部
+                    </a>
+                </nav>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- container -->
+</div>
+<!-- //products-top -->
+
+<!-- footer -->
+<div class="footer">
+    <!-- container -->
+    <div class="container">
+        <div class="col-md-6 footer-left  wow fadeInLeft animated" data-wow-delay="0.4s"
+             style="visibility: visible; -webkit-animation-delay: 0.4s;">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="document.html">文档</a></li>
+                <li><a href="appEnv.html">应用场景</a></li>
+                <li><a href="mail.html">联系我们</a></li>
+            </ul>
+            <form>
+                <input type="text" placeholder="邮箱" required="">
+                <input type="submit" value="加入我们">
+            </form>
+        </div>
+        <div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s"
+             style="visibility: visible; -webkit-animation-delay: 0.4s;">
+            <h3>联系方式</h3>
+
+            <div class="address">
+                <p>Email:,
+                    <span>825338623@qq.com</span>
+                </p>
+            </div>
+            <div class="phone">
+                <p>(+86)18253594233</p>
+            </div>
+        </div>
+        <div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s"
+             style="visibility: visible; -webkit-animation-delay: 0.4s;">
+            <a href="#"><img src="images/logo.png" alt=""/></a>
+
+            <p>QueryBuilder-jQuery 是由以下人员辛勤劳作的的结晶：
+
+            <p>郭鹏飞，武彩平</p></p>
+            <!--<p>QueryBuilder-jQuery 是由以下人员辛勤劳作的的结晶：<p>郭鹏飞，武彩平</p>，我们在这个插件的创作、构思的过程中付出了大量的汗水、在零散的业余时间内最终完成了这个插件，欢迎使用者对我们提出宝贵的意见，我们将会努力将这个插件做的更好。</p>
+-->
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- //container -->
+</div>
+<!-- //footer -->
+<div class="copyright">
+    <!-- container -->
+    <div class="container">
+        <div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s"
+             style="visibility: visible; -webkit-animation-delay: 0.4s;">
+            <p>Copyright &copy; 2016. 牛牛技术网 All rights <a href="http://www.niubai.net.cn" target="_blank"
+                                                          title="QueryBuilder">QueryBuilder - jQuery</a> - <a
+                    href="http://www.miibeian.gov.cn/" target="_blank">鲁ICP备16025806号-1 </a></p>
+        </div>
+        <!--<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+            <ul>
+                <li><a href="#" class="twitter"> </a></li>
+                <li><a href="#" class="twitter facebook"> </a></li>
+                <li><a href="#" class="twitter chrome"> </a></li>
+                <li><a href="#" class="twitter pinterest"> </a></li>
+                <li><a href="#" class="twitter linkedin"> </a></li>
+                <li><a href="#" class="twitter dribbble"> </a></li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+    </div>-->
+        <!-- //container -->
+    </div>
+</div>
+</body>
+</html>
